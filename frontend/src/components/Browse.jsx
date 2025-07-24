@@ -36,7 +36,6 @@ const Browse = () => {
                     }
                 </div>
             </div>
-            <Footer />
         </div >
     )
 }
