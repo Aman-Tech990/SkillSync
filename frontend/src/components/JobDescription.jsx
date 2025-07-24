@@ -45,7 +45,7 @@ const JobDescription = () => {
     useEffect(() => {
         const fetchSingleJobById = async () => {
             try {
-                const res = await axios.get(`${JOB_API_END_POINT}/get/${jobId}`, {
+                const res = await axios.get(`https://skillsync-ap01.onrender.com//api/v1/job/get/${jobId}`, {
                     withCredentials: true
                 });
                 if (res.data.success) {
