@@ -9,7 +9,7 @@ const useGetAllCompanies = () => {
     useEffect(() => {
         const fetchAllCompanies = async () => {
             try {
-                const res = await axios.get(`${COMPANY_API_END_POINT}/get`, {
+                const res = await axios.get(`https://skillsync-ap01.onrender.com/api/v1/company/get`, {
                     withCredentials: true
                 })
                 if (res.data.success) {

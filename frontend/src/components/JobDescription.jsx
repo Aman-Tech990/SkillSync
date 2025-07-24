@@ -6,7 +6,6 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { setSingleJob } from '@/redux/jobSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { APPLICATION_API_END_POINT, JOB_API_END_POINT } from './utils/constant';
 import { toast } from 'sonner';
 
 const JobDescription = () => {
@@ -22,7 +21,7 @@ const JobDescription = () => {
 
     const applyJobHandler = async () => {
         try {
-            const res = await axios.get(`${APPLICATION_API_END_POINT}/apply/${jobId}`, {
+            const res = await axios.get(`https://skillsync-ap01.onrender.com/api/v1/job/apply/${jobId}`, {
                 withCredentials: true
             });
             console.log(res.data);
@@ -60,7 +59,7 @@ const JobDescription = () => {
     }, [jobId, dispatch, user?.id]);
 
     return (
-        <div> 
+        <div>
             <Navbar />
             <div className="max-w-7xl mx-auto my-10">
                 <h1 className="font-bold text-xl">{singleJob?.title}</h1>
@@ -74,7 +73,7 @@ const JobDescription = () => {
                         </Badge>
                         <Badge className="text-[#7209b7] font-bold" variant="ghost">
                             {singleJob?.salary} LPA
-                        </Badge>  
+                        </Badge>
                     </div>
                     <Button
                         onClick={isApplied ? null : applyJobHandler}

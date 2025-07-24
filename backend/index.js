@@ -23,7 +23,7 @@ const port = process.env.PORT || 5000;
 
 // CORS Permission
 const corsOptions = {
-    origin: `http://localhost:5173`,
+    origin: `https://skillsync-ap01.onrender.com`,
     credentials: true
 }
 app.use(cors(corsOptions));

@@ -1,7 +1,6 @@
 import Navbar from '@/components/shared/Navbar';
 import React, { useEffect } from 'react';
 import ApplicantsTable from './ApplicantsTable';
-import { APPLICATION_API_END_POINT } from '@/components/utils/constant';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setAllApplicants } from '@/redux/applicationSlice';
@@ -14,7 +13,7 @@ const Applicants = () => {
     useEffect(() => {
         const fetchAllApplicants = async () => {
             try {
-                const res = await axios.get(`${APPLICATION_API_END_POINT}/${params.id}/applicants`, {
+                const res = await axios.get("https://skillsync-ap01.onrender.com/api/v1/application/applicants", {
                     withCredentials: true
                 });
 

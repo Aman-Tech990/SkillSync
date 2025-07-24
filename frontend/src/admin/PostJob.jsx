@@ -48,7 +48,7 @@ const PostJob = () => {
         console.log(input);
         try {
             setLoading(true);
-            const res = await axios.post(`${JOB_API_END_POINT}/post`, input, {
+            const res = await axios.post(`https://skillsync-ap01.onrender.com/api/v1/job/post`, input, {
                 headers: {
                     'Content-Type': 'application/json'
                 },

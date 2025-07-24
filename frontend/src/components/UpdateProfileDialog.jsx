@@ -5,7 +5,6 @@ import { Label } from './ui/label';
 import { Input } from './ui/input';
 import { Loader2 } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
-import { USER_API_END_POINT } from './utils/constant';
 import { setUser } from '@/redux/authSlice';
 import { toast } from 'sonner';
 import axios from 'axios';
@@ -46,7 +45,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
         }
         try {
             setLoading(true);
-            const res = await axios.post(`${USER_API_END_POINT}/profile/update`, formData, {
+            const res = await axios.post(`https://skillsync-ap01.onrender.com/api/v1/user/profile/update`, formData, {
                 headers: {
                     'Content-type': 'multipart/form-data'
                 },
