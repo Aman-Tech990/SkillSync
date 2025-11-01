@@ -9,7 +9,7 @@ const useGetAllAdminJobs = () => {
     useEffect(() => {
         const fetchAllAdminJobs = async () => {
             try {
-                const res = await axios.get(`https://skillsync-ap01.onrender.com/api/v1/job/getadminJob`, {
+                const res = await axios.get(`http://localhost:8080/api/v1/job/getadminJob`, {
                     withCredentials: true
                 })
                 if (res.data.success) {

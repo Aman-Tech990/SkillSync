@@ -11,7 +11,7 @@ const useGetAllAppliedJobs = () => {
     useEffect(() => {
         const fetchAllAppliedJobs = async () => {
             try {
-                const res = await axios.get(`https://skillsync-ap01.onrender.com/api/v1/application/get`, { withCredentials: true });
+                const res = await axios.get(`https://localhost:8080/api/v1/application/get`, { withCredentials: true });
                 if (res.data.success) {
                     dispatch(setAllAppliedJobs(res.data.applications))
                     toast.success(res.data.message);

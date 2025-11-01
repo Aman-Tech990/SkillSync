@@ -45,7 +45,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
         }
         try {
             setLoading(true);
-            const res = await axios.post(`https://skillsync-ap01.onrender.com/api/v1/user/profile/update`, formData, {
+            const res = await axios.post(`http://localhost:8080/api/v1/user/profile/update`, formData, {
                 headers: {
                     'Content-type': 'multipart/form-data'
                 },

@@ -44,7 +44,7 @@ const Signup = () => {
         }
         try {
             dispatch(setLoading(true));
-            const res = await axios.post("https://skillsync-ap01.onrender.com/api/v1/user/register", formData,
+            const res = await axios.post("http://localhost:8080/api/v1/user/register", formData,
                 {
                     headers: {
                         "Content-Type": "multipart/form-data"

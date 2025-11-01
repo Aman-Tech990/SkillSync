@@ -10,7 +10,7 @@ const useGetCompanyById = (companyId) => {
     useEffect(() => {
         const fetchCompanyById = async () => {
             try {
-                const res = await axios.get(`https://skillsync-ap01.onrender.com/api/v1/company/get/${companyId}`, {
+                const res = await axios.get(`http://localhost:8080/api/v1/company/get/${companyId}`, {
                     withCredentials: true
                 });
                 if (res.data.success) {

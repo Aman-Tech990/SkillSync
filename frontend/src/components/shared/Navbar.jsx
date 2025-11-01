@@ -16,7 +16,7 @@ const Navbar = () => {
 
     const logoutHandler = async () => {
         try {
-            const res = await axios.get(`https://skillsync-ap01.onrender.com/api/v1/user/logout`, {
+            const res = await axios.get(`http://localhost:8080/api/v1/user/logout`, {
                 withCredentials: true
             })
             if (res.data.success) {

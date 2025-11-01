@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon backend/index.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "node backend/index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "Aman Parida",
@@ -23,5 +22,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.16.3",
     "multer": "^2.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }

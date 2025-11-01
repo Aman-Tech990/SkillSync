@@ -10,7 +10,6 @@ import UpdateProfileDialog from './UpdateProfileDialog';
 import { useSelector } from 'react-redux';
 import useGetAllAppliedJobs from '@/hooks/useGetAllAppliedJobs';
 
-// const skills = [`HTML`, `CSS`, `Javascript`, `React.js`];
 const isResume = true;
 
 const Profile = () => {
